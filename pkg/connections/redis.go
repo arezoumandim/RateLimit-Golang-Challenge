@@ -52,4 +52,3 @@ func NewRedis(cfg RedisConfig, logger *zap.Logger) (*redis.Client, error) {
 
 	return client, nil
 }
-

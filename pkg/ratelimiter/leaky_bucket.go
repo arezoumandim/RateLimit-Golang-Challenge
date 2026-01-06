@@ -135,7 +135,7 @@ func (lb *LeakyBucket) GetRemaining(ctx context.Context, userID string, limit in
 	if err != nil {
 		return limit, nil // If parsing fails, assume full capacity
 	}
-	
+
 	lastUpdate, err := strconv.ParseInt(bucketData[1].(string), 10, 64)
 	if err != nil {
 		return limit, nil // If parsing fails, assume full capacity
@@ -165,4 +165,3 @@ func (lb *LeakyBucket) Reset(ctx context.Context, userID string) error {
 	key := lb.keyPrefix + userID
 	return lb.client.Del(ctx, key).Err()
 }
-

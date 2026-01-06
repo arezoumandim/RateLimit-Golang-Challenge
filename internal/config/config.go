@@ -11,12 +11,12 @@ import (
 
 // Config is the root configuration structure
 type Config struct {
-	App      AppConfig      `mapstructure:"app"`
-	API      HTTPConfig     `mapstructure:"api"`
-	Redis    RedisConfig    `mapstructure:"redis"`
-	Logger   LoggerConfig   `mapstructure:"logger"`
+	App       AppConfig       `mapstructure:"app"`
+	API       HTTPConfig      `mapstructure:"api"`
+	Redis     RedisConfig     `mapstructure:"redis"`
+	Logger    LoggerConfig    `mapstructure:"logger"`
 	RateLimit RateLimitConfig `mapstructure:"rate_limit"`
-	Debug    bool           `mapstructure:"debug"`
+	Debug     bool            `mapstructure:"debug"`
 }
 
 // AppConfig contains application metadata
@@ -113,4 +113,3 @@ func LoadConfig() (*Config, error) {
 
 	return &cfg, nil
 }
-

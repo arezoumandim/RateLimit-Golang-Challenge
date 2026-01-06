@@ -17,4 +17,3 @@ type RateLimiter interface {
 	// Reset clears the rate limit for a user
 	Reset(ctx context.Context, userID string) error
 }
-

@@ -130,4 +130,3 @@ func (sw *SlidingWindow) Reset(ctx context.Context, userID string) error {
 	key := sw.keyPrefix + userID
 	return sw.client.Del(ctx, key).Err()
 }
-

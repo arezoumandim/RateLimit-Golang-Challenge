@@ -39,4 +39,3 @@ func setDefaults() {
 	// Debug mode
 	viper.SetDefault("debug", false)
 }
-

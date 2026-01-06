@@ -32,4 +32,3 @@ func validateConfig(cfg *Config) error {
 
 	return nil
 }
-
