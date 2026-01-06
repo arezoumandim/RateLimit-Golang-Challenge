@@ -1,11 +1,12 @@
 package handlers
 
 import (
-	"demo-saturday/internal/service/ratelimiter"
+	"net/http"
+	"ratelimit-challenge/internal/service/ratelimiter"
+	"strconv"
+
 	"github.com/labstack/echo/v4"
 	"go.uber.org/zap"
-	"net/http"
-	"strconv"
 )
 
 // RegisterRoutes registers all API routes
@@ -42,8 +43,8 @@ func (h *Handler) Test(c echo.Context) error {
 	}
 
 	return c.JSON(http.StatusOK, map[string]interface{}{
-		"message": "request successful",
-		"user_id": userID,
+		"message":   "request successful",
+		"user_id":   userID,
 		"timestamp": c.Request().Header.Get(echo.HeaderXRequestID),
 	})
 }
@@ -149,4 +150,3 @@ func (h *Handler) ResetRateLimit(c echo.Context) error {
 		"user_id": userID,
 	})
 }
-

@@ -1,7 +1,8 @@
 package utility
 
 import (
-	"demo-saturday/internal/config"
+	"ratelimit-challenge/internal/config"
+
 	"go.uber.org/zap"
 	"go.uber.org/zap/zapcore"
 )
@@ -44,4 +45,3 @@ func NewLogger(cfg *config.Config) (*zap.Logger, error) {
 
 	return logger, nil
 }
-

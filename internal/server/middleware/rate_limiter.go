@@ -1,11 +1,12 @@
 package middleware
 
 import (
-	"demo-saturday/internal/service/ratelimiter"
+	"net/http"
+	"ratelimit-challenge/internal/service/ratelimiter"
+	"strconv"
+
 	"github.com/labstack/echo/v4"
 	"go.uber.org/zap"
-	"net/http"
-	"strconv"
 )
 
 // RateLimiterMiddleware creates a middleware that enforces rate limiting
@@ -49,10 +50,10 @@ func RateLimiterMiddleware(rateLimiterService *ratelimiter.Service, logger *zap.
 				)
 
 				return c.JSON(http.StatusTooManyRequests, map[string]interface{}{
-					"error":     "rate limit exceeded",
-					"message":   "too many requests",
+					"error":       "rate limit exceeded",
+					"message":     "too many requests",
 					"retry_after": 1, // seconds
-					"remaining": remaining,
+					"remaining":   remaining,
 				})
 			}
 
@@ -65,4 +66,3 @@ func RateLimiterMiddleware(rateLimiterService *ratelimiter.Service, logger *zap.
 		}
 	}
 }
-

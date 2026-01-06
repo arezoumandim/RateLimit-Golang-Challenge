@@ -7,8 +7,8 @@ import (
 	"sync"
 	"time"
 
-	"demo-saturday/internal/config"
-	"demo-saturday/pkg/ratelimiter"
+	"ratelimit-challenge/internal/config"
+	"ratelimit-challenge/pkg/ratelimiter"
 
 	"github.com/go-redis/redis/v8"
 	"go.uber.org/zap"
@@ -224,4 +224,3 @@ func parseInt(s string) (int, error) {
 	}
 	return result, nil
 }
-

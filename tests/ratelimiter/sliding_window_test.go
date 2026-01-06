@@ -2,13 +2,14 @@ package ratelimiter
 
 import (
 	"context"
-	"github.com/go-redis/redis/v8"
-	"github.com/go-redis/redismock/v8"
-	"demo-saturday/pkg/ratelimiter"
-	"go.uber.org/zap"
+	"ratelimit-challenge/pkg/ratelimiter"
 	"strconv"
 	"testing"
 	"time"
+
+	"github.com/go-redis/redis/v8"
+	"github.com/go-redis/redismock/v8"
+	"go.uber.org/zap"
 )
 
 // TestSlidingWindow_Allow tests the Allow function using a real Redis instance
@@ -140,4 +141,3 @@ func TestSlidingWindow_Reset(t *testing.T) {
 		}
 	})
 }
-

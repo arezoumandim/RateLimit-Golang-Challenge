@@ -2,8 +2,8 @@ package ratelimiter
 
 import (
 	"context"
-	"demo-saturday/internal/config"
-	"demo-saturday/internal/service/ratelimiter"
+	"ratelimit-challenge/internal/config"
+	"ratelimit-challenge/internal/service/ratelimiter"
 	"strconv"
 	"testing"
 	"time"

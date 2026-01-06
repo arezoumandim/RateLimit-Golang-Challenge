@@ -8,7 +8,7 @@ import (
 	"syscall"
 	"time"
 
-	"demo-saturday/internal/app/server"
+	"ratelimit-challenge/internal/app/server"
 
 	"github.com/spf13/cobra"
 	"go.uber.org/zap"
@@ -62,4 +62,3 @@ func runServer() error {
 		return err
 	}
 }
-

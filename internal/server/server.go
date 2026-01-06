@@ -2,21 +2,22 @@ package server
 
 import (
 	"context"
-	"demo-saturday/internal/config"
-	"demo-saturday/internal/server/handlers"
-	ratelimiterMiddleware "demo-saturday/internal/server/middleware"
-	"demo-saturday/internal/service/ratelimiter"
+	"net/http"
+	"ratelimit-challenge/internal/config"
+	"ratelimit-challenge/internal/server/handlers"
+	ratelimiterMiddleware "ratelimit-challenge/internal/server/middleware"
+	"ratelimit-challenge/internal/service/ratelimiter"
+
 	"github.com/labstack/echo/v4"
 	echoMiddleware "github.com/labstack/echo/v4/middleware"
 	"go.uber.org/zap"
-	"net/http"
 )
 
 // Server represents the HTTP server
 type Server struct {
-	echo      *echo.Echo
-	config    *config.Config
-	logger    *zap.Logger
+	echo        *echo.Echo
+	config      *config.Config
+	logger      *zap.Logger
 	rateLimiter *ratelimiter.Service
 }
 
@@ -133,4 +134,3 @@ func (s *Server) Shutdown(ctx context.Context) error {
 	s.logger.Info("shutting down HTTP server")
 	return s.echo.Shutdown(ctx)
 }
-

@@ -1,8 +1,8 @@
 package main
 
 import (
-	commands "demo-saturday/cmd"
 	"os"
+	commands "ratelimit-challenge/cmd"
 )
 
 func main() {

@@ -7,7 +7,7 @@ This project implements a high-performance distributed rate limiter for API Gate
 ## Project Structure
 
 ```
-demo-saturday/
+ratelimit-challenge/
 ├── cmd/                    # Command-line interfaces
 │   └── commands/           # Cobra commands
 │       └── server/         # Server command

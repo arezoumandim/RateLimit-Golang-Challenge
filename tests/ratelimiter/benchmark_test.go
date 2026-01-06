@@ -2,11 +2,11 @@ package ratelimiter
 
 import (
 	"context"
-	"demo-saturday/internal/config"
-	ratelimiterservice "demo-saturday/internal/service/ratelimiter"
-	ratelimiterpkg "demo-saturday/pkg/ratelimiter"
 	"github.com/go-redis/redis/v8"
 	"go.uber.org/zap"
+	"ratelimit-challenge/internal/config"
+	ratelimiterservice "ratelimit-challenge/internal/service/ratelimiter"
+	ratelimiterpkg "ratelimit-challenge/pkg/ratelimiter"
 	"testing"
 	"time"
 )

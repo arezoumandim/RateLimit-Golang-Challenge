@@ -36,7 +36,7 @@ A high-performance distributed rate limiter for API Gateway that provides reques
 This project uses Clean Architecture principles:
 
 ```
-demo-saturday/
+ratelimit-challenge/
 ├── cmd/                    # Command-line interfaces
 │   └── commands/           # Cobra commands
 ├── internal/               # Internal code (private)
@@ -194,8 +194,8 @@ curl http://localhost:8080/health
 
 ```go
 import (
-    "demo-saturday/internal/service/ratelimiter"
-    "demo-saturday/pkg/connections"
+    "ratelimit-challenge/internal/service/ratelimiter"
+    "ratelimit-challenge/pkg/connections"
 )
 
 // Create Redis connection
@@ -228,7 +228,7 @@ if !allowed {
 
 ```go
 import (
-    "demo-saturday/internal/server/middleware"
+    "ratelimit-challenge/internal/server/middleware"
 )
 
 // Add middleware to Echo

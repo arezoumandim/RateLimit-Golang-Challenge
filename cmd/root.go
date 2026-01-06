@@ -1,7 +1,7 @@
 package commands
 
 import (
-	"demo-saturday/cmd/commands/server"
+	"ratelimit-challenge/cmd/commands/server"
 
 	"github.com/spf13/cobra"
 )
@@ -19,4 +19,3 @@ func NewRootCommand() *cobra.Command {
 
 	return rootCmd
 }
-

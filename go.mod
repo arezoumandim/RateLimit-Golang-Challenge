@@ -1,4 +1,4 @@
-module demo-saturday
+module ratelimit-challenge
 
 go 1.21
 

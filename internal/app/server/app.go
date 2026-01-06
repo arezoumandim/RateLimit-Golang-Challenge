@@ -3,11 +3,11 @@ package server
 import (
 	"context"
 	"fmt"
-	"demo-saturday/internal/config"
-	"demo-saturday/internal/server"
-	"demo-saturday/internal/service/ratelimiter"
-	"demo-saturday/pkg/connections"
-	"demo-saturday/pkg/utility"
+	"ratelimit-challenge/internal/config"
+	"ratelimit-challenge/internal/server"
+	"ratelimit-challenge/internal/service/ratelimiter"
+	"ratelimit-challenge/pkg/connections"
+	"ratelimit-challenge/pkg/utility"
 	"time"
 
 	"github.com/go-redis/redis/v8"
@@ -86,4 +86,3 @@ func provideRedis(cfg *config.Config, logger *zap.Logger) (*redis.Client, error)
 		DB:       cfg.Redis.DB,
 	}, logger)
 }
-
