@@ -1,0 +1,52 @@
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+rate-limiter
+,idea
+# Test binary, built with `go test -c`
+*.test
+
+# Output of the go coverage tool
+*.out
+coverage.html
+
+# Dependency directories
+vendor/
+
+# Go workspace file
+go.work
+
+# Environment files
+.env
+.env.local
+.env.*.local
+.env.development
+.env.production
+.env.test
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Build artifacts
+dist/
+build/
+
+# Temporary files
+tmp/
+temp/
+
